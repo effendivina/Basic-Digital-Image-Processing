@@ -1,0 +1,193 @@
+{% extends "layout.html" %} {% block body %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="text-center">Pilih Menu Pengolahan Citra Anda!</h1>
+        <div class="row">
+            <div class="col align-self-start text-center">
+                <form id="" action="{{ url_for('normal') }}" method="POST" enctype="multipart/form-data">
+                    <button type="submit" class="btn btn-primary">Kembali ke Gambar Normal</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col align-self-start">
+                <h3>Skala Gambar</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('grayscale') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Grayscale</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('zoomin') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Zoom In</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('zoomout') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Zoom Out</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-start">
+                <h3>Geser Gambar</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('moveleft') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Move Left</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('moveright') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Move Right</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('moveup') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Move Up</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('movedown') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Move Down</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-start">
+                <h3>Terang Gambar</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightmulti') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Terang (Perkalian)</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightdiv') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Gelap (Pembagian)</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightplus') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Terang (Penjumlahan)</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightsubs') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Gelap (Pengurangan)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col align-self-start">
+                <h3>Histogram</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('view_histogram') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Tampil Histogram</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('hist_eq') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Histogram Equalization</button>
+                        </form>
+                    </div>
+                </div>   
+            </div>
+            <div class="col align-self-start">
+                <h3>Konvolusi</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('blur') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Blur</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('sharp') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Sharp</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('edge') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Edge Detection</button>
+                        </form>
+                    </div>
+                </div>   
+            </div>
+            <div class="col align-self-start">
+                <h3>Segmentasi</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('input_threshold') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Threshold</button>
+                        </form>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('input_region') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-success">Region Growth</button>
+                        </form>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div class="text-center">
+            <form form id="" action="{{ url_for('threshold') }}" method="POST" enctype="multipart/form-data">
+                <table align="center">
+                    <h4>Input Batas Warna</h4>
+                    <tr>
+                        <td>Batas Warna Merah</td>
+                        <td>
+                            <input placeholder="0" size="3" type="text" name="redbawah">
+                            <input placeholder="0" size="3" type="text" name="redatas">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Batas Warna Hijau</td>
+                        <td>
+                            <input placeholder="0" size="3" type="text" name="greenbawah">
+                            <input placeholder="0" size="3" type="text" name="greenatas">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Batas Warna Biru</td>
+                        <td>
+                            <input placeholder="0" size="3" type="text" name="bluebawah">
+                            <input placeholder="0" size="3" type="text" name="blueatas">
+                        </td>
+                    </tr>
+                </table>
+                <table align="center">
+                    <h4>Warna Hasil Segmentasi</h4>
+                    <tr>
+                        <td>Red</td>
+                        <td>Green</td>
+                        <td>Blue</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input placeholder="0" size="3" type="text" name="red">
+                        </td>
+                        <td>
+                            <input placeholder="0" size="3" type="text" name="green">
+                        </td>
+                        <td>
+                            <input placeholder="0" size="3" type="text" name="blue">
+                        </td>
+                    </tr>
+                </table>
+                <h6 style="color:red">{{ alert }}</h6>
+                <button type="submit" class="btn btn-success">Preview</button>
+            </form>
+        </div>
+        <div class="jumbotron-fluid">
+            <div class="container text-center">
+                <h3>Hasil Pemrosesan Citra</h3>
+                <img src="{{ url_for('static', filename=file_path) }}" alt="image here">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+Nama : Vina Fadriani Effendi
+NIM : 1301154560
+
+FUNGSI YANG DIKERJAKAN:
+
+Selesai:
+1. Grayscale
+2. Zoom In
+3. Zoom Out
+4. Move Left
+5. Move Right
+6. Move Up
+7. Move Down
+8. Brightness with Multiplication
+9. Brightness with Addition
+10. Brightness with Substraction
+11. Brightness with Division
+12. Show Histogram
+13. Konvolusi Blur
+14. Konvolusi Sharp
+15. Konvolusi Edge Detection
+16. Segmentation Threshold
+17. Segmentation Region Growth
+
+Tidak Selesai:
+1. Histogram Equalization
